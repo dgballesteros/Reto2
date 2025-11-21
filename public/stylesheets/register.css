@@ -1,3 +1,4 @@
+
 /* LOGIN HERO SECTION */
 
 section#register-hero-section {
@@ -73,7 +74,7 @@ section#register-hero-section {
 
     
 
-    button[type="submit"] {
+    a#registrarme-btn {
         padding: 10px 20px;
         border: 0px;
         border-radius: 10px;
@@ -85,5 +86,6 @@ section#register-hero-section {
         cursor: pointer;
         font-family: "Poppins", sans-serif;
         align-self: flex-start;
+        text-decoration: none;
     }
 }

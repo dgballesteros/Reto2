@@ -21,6 +21,28 @@ body {
   background: var(--main-blue);
 }
 
+dialog#dialog{
+  background: var(--main-blue);
+  border: 0px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  position:fixed;
+  padding: 10px 20px;
+  >*{
+    padding:1rem;
+  }
+}
+
+dialog#dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.616);
+  backdrop-filter: blur(3px);
+  
+}
+
+
+
+
 
 
 

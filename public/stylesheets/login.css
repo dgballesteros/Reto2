@@ -1,3 +1,5 @@
+
+
 /* LOGIN HERO SECTION */
 
 section#login-hero-section {
@@ -76,15 +78,16 @@ section#login-hero-section {
         
     }
       
-    button[type="submit"] {
+    a#iniciar-sesion-btn {
         padding: 10px 20px;
         border: 0px;
         border-radius: 10px;
         background: var(--pure-white);
-        color: var(--blue-text-in-item);
+        color: black;
         font-weight: 500;
         font-size: 1rem;
         cursor: pointer;
         font-family: "Poppins", sans-serif;
+        text-decoration: none;
     }
 }
