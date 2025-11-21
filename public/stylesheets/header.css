@@ -1,0 +1,52 @@
+header#header {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+
+    h1.logo {
+        color: var(--pure-white);
+        font-size: 2.5rem;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    nav#menu-nav {
+        display: flex;
+        gap: 80px;
+
+        a.link-nav {
+            text-decoration: none;
+            color: var(--pure-white);
+            transition: 0.3s;
+        }
+
+        a.link-nav:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    /* ICONO DE INICIO DE SESIÓN */
+
+    a.login-link {
+        padding: 10px 9px;
+        background: var(--pure-white);
+        border-radius: 30px;
+        transition: 0.3s;
+
+        i.fa-regular,
+        i.fa-user {
+            transition: 0.3s;
+            font-size: 1.5rem;
+            color: var(--blue-text-on-item);
+        }
+    }
+
+    a.login-link:hover {
+
+        i.fa-regular,
+        i.fa-user {
+            transform: scale(1.1);
+        }
+    }
+}

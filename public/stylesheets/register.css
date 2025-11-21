@@ -1,0 +1,89 @@
+/* LOGIN HERO SECTION */
+
+section#register-hero-section {
+
+    padding-top: 50px;
+
+    h1 {
+        color: var(--pure-white);
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: var(--pure-white);
+        font-weight: 300;
+    }
+
+    form label {
+        color: var(--pure-white);
+    }
+
+    div.register-container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+
+
+        form {
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            input {
+                align-self: stretch;
+                padding: 15px;
+                border-radius: 10px;
+                border: 0;
+                outline: none;
+            }
+
+            div.form-row {
+                display: flex;
+                gap: 30px;
+                
+                div.input-label-container {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+
+                    label {
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        width: 100%;
+                        box-sizing: border-box;
+                        font-size: 1.1rem;
+                    }
+        
+                    input.emailUser {
+                        width: 390px;
+                    }
+
+                    input.lastnameUser {
+                        width: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        border: 0px;
+        border-radius: 10px;
+        margin-top: 20px;
+        background: var(--pure-white);
+        color: var(--blue-text-in-item);
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        align-self: flex-start;
+    }
+}

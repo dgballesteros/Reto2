@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+    <title>BluBox - Regístrate</title>
+</head>
+<body>
+
+    <%- include('partials/main-menu') %>
+
+    <section id="register-hero-section">
+        <h1>Regístrate</h1>
+        <h2>Regístrate para crear una cuenta y poder acceder a tu colección,<br> visualizar películas y organizar todas tus copias.</h2>
+
+        <div class="register-container">
+            <form action="">
+                <div class="form-row">
+                    <div class="input-label-container">
+                        <label for="name">Nombre:</label>
+                        <input class="nameUser" type="text" id="nameUser" name="name" required>
+                    </div>
+                    <div class="input-label-container">
+                        <label for="lastname">Apellidos:</label>
+                        <input class="lastnameUser" type="text" id="lastnameUser" name="lastname" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-label-container">
+                        <label for="email">Correo electrónico:</label>
+                        <input class="emailUser" type="email" id="emailUser" name="email" required>
+                    </div>
+                    <div class="input-label-container">
+                        <label for="born-date">Fecha de nacimiento:</label>
+                        <input  type="date" id="bornDateUser" name="born-date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="input-label-container">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="passwordUser" name="password" required>
+                    </div>
+                    <div class="input-label-container">
+                        <label for="repeatPassword">Repetir contraseña:</label>
+                        <input type="password" id="repeatPasswordUser" name="repeatPassword" required>
+                    </div>
+                </div>
+                <button type="submit">Registrarme</button>
+            </form>
+        </div>
+    </section>
+    
+</body>
+</html>

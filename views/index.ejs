@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+  <title>BluBox - Películas y entretenimiento</title>
+</head>
+<body>
+
+  <!-- HEADER -->
+  
+  <%- include('partials/main-menu') %> 
+
+  <!-- HERO SECTION -->
+
+  <div class="background-image"></div>
+  <div class="blue-overlay"></div>
+  <div id="slider">
+    <div id="left-arrow">
+      <i class="fa-solid fa-circle-left" style="font-size: 2.5rem; color: #7181a3; cursor: pointer;"></i>
+    </div>
+    <div id="film-container">
+      <img class="cover" src="/images/logo-el-padrino.webp" alt="" width="300" >
+      <div class="film-info">
+        <span class="release-year">1972</span>
+        <span class="duration">2h 56min</span>
+        <span class="quality">HD</span>
+      </div>
+      <span class="limit-age">16+</span>
+      <div class="action-buttons">
+        <button id="add-film"><span class="plus-button"><i class="fa-solid fa-plus fa-sm"></i></span>Añadir</button>
+        <button id="like-film"><i class="fa-regular fa-heart"></i></button>
+      </div>
+    </div>
+    <div id="right-arrow">
+      <i class="fa-solid fa-circle-right"  style="font-size: 2.5rem; color: #7181a3; cursor: pointer;"></i>
+    </div>
+  </div>
+
+  <!-- ULTIMAS PELICULAS AÑADIDAS -->
+
+  <section id="latest-added-films">
+    <h1>Últimas películas añadidas</h1> 
+    <div class="cards-container">
+      <div class="card-inner">
+        <img src="/images/cards/club-poetas-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/diario-de-noa-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/el-padrino-2-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/el-padrino-3-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/indomable-will-hunting-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/la-la-land-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/la-vida-es-bella-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/mi-nombre-es-khan-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/rocky-iv-cartel.jpg" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/una-mente-maravillosa-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/el-padrino-3-cartel.webp" alt="">
+      </div>
+      <div class="card-inner">
+        <img src="/images/cards/indomable-will-hunting-cartel.webp" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US SECTION -->
+   
+  <section id="join-us-section">
+    <div id="join-us">
+      <h1>Crea tu propia colección</h1>
+      <h2>Gestiona tu colección, visualiza tus películas, añade nuevas copias<br> y consulta sus detalles de forma rápida y sencilla.</h2>
+      <a id="login" href="/login">Inicia sesión</a>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+    <title>BluBox - Solicitar ayuda</title>
+</head>
+<body>
+    
+    <%- include ('partials/main-menu') %>
+
+    <section id="support-hero-section">
+        <h1>Solicitar ayuda</h1>
+        <h2>Envía un mensaje con tu solicitud y te contestaremos lo más pronto<br>posible. ¡Tu opinión nos importa!</h2>
+
+        <div class="support-container">
+            <form action="">
+                <div class="form-row">
+                    <div class="input-label-container">
+                        <label for="subject">Asunto:</label>
+                        <input class="subject" type="text" id="subjectSupport" name="subject" required>
+                    </div>
+                    <div class="input-label-container">
+                        <label for="lastname">Mensaje:</label>
+                        <textarea class="textArea" name="textArea" id="textArea"></textarea>
+                    </div>
+                </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+    </section>
+
+</body>
+</html>
