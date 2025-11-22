@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "imagen": "/images/cards/good-will-hunting.webp",
+        "titulo": "Good Will Hunting",
+        "descripcion": "Will Hunting, un joven con un talento extraordinario para las matemáticas, lucha con su pasado mientras descubre su verdadero potencial.",
+        "director": "Gus Van Sant",
+        "genero": ["Drama"],
+        "año_de_lanzamiento": 1997
+    },
+    {
+        "id": 2,
+        "imagen": "/images/cards/rocky-iv.webp",
+        "titulo": "Rocky IV",
+        "descripcion": "Rocky Balboa se enfrenta al poderoso Ivan Drago en un combate marcado por la tensión política de la Guerra Fría.",
+        "director": "Sylvester Stallone",
+        "genero": ["Acción", "Deporte", "Drama"],
+        "año_de_lanzamiento": 1985
+    },
+    {
+        "id": 3,
+        "imagen": "/images/cards/rocky-iii.webp",
+        "titulo": "Rocky III",
+        "descripcion": "Rocky debe reencontrarse a sí mismo para derrotar a Clubber Lang, un rival feroz que amenaza su reinado.",
+        "director": "Sylvester Stallone",
+        "genero": ["Acción", "Deporte", "Drama"],
+        "año_de_lanzamiento": 1982
+    },
+    {
+        "id": 4,
+        "imagen": "/images/cards/diario-de-noa.webp",
+        "titulo": "El Diario de Noa",
+        "descripcion": "La apasionada historia de amor entre Allie y Noah, narrada a través de los recuerdos guardados en un diario.",
+        "director": "Nick Cassavetes",
+        "genero": ["Romance", "Drama"],
+        "año_de_lanzamiento": 2004
+    },
+    {
+        "id": 5,
+        "imagen": "/images/cards/dead-poets-society.webp",
+        "titulo": "Dead Poets Society",
+        "descripcion": "Un profesor inspira a sus alumnos a romper moldes y buscar su propia voz dentro de una academia conservadora.",
+        "director": "Peter Weir",
+        "genero": ["Drama"],
+        "año_de_lanzamiento": 1989
+    },
+    {
+        "id": 6,
+        "imagen": "/images/cards/el-padrino-2.webp",
+        "titulo": "El Padrino 2",
+        "descripcion": "La historia alterna entre el ascenso de Vito Corleone y el consolidado liderazgo de Michael en la familia mafiosa.",
+        "director": "Francis Ford Coppola",
+        "genero": ["Crimen", "Drama"],
+        "año_de_lanzamiento": 1974
+    },
+    {
+        "id": 7,
+        "imagen": "/images/cards/el-padrino-3.webp",
+        "titulo": "El Padrino 3",
+        "descripcion": "Michael Corleone intenta alejar a la familia de los negocios criminales, mientras su pasado amenaza con destruirlo todo.",
+        "director": "Francis Ford Coppola",
+        "genero": ["Crimen", "Drama"],
+        "año_de_lanzamiento": 1990
+    },
+    {
+        "id": 8,
+        "imagen": "/images/cards/la-la-land.webp",
+        "titulo": "La La Land",
+        "descripcion": "Una actriz y un pianista de jazz intentan cumplir sus sueños mientras viven una historia de amor marcada por decisiones difíciles.",
+        "director": "Damien Chazelle",
+        "genero": ["Musical", "Romance", "Drama"],
+        "año_de_lanzamiento": 2016
+    }
+]

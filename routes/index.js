@@ -1,9 +1,13 @@
 var express = require('express');
 var router = express.Router();
 
+const dataService = require('../data/dataService');
+
 /* Ruta de la Home */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  let peliculas = dataService.getPeliculas();
+  let peliculasSlider = dataService.getPeliculasSlider();
+  res.render('index', { peliculas : peliculas, peliculasSlider : peliculasSlider });
 });
 
 /* Ruta del Login */

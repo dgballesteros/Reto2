@@ -75,6 +75,7 @@ section#support-hero-section {
                         padding: 15px;
                         border-radius: 10px;
                         font-size: 1.1rem;
+                        outline: none;
                     }
                 }
             }

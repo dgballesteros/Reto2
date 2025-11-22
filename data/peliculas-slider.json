@@ -1,0 +1,18 @@
+[
+  {
+    "background": "/images/carrousel/el-padrino.webp",
+    "cover": "/images/carrousel/logo-el-padrino.webp",
+    "year": "1972",
+    "duration": "2h 56min",
+    "age": "16+",
+    "quality": "HD"
+  },
+  {
+    "background": "/images/carrousel/el-padrino.web",
+    "cover": "/images/carrousel/logo-el-padrino.webp",
+    "year": "2016",
+    "duration": "2h 08min",
+    "age": "12+",
+    "quality": "HD"
+  }
+]
