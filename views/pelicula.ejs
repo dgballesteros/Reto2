@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+    <title>BluBox - <%= pelicula.titulo %> </title>
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <%- include ('partials/main-menu') %> 
+
+    <!-- MAIN -->
+
+    <main>
+        <section id="detalle-hero-section">
+            <img class="imagen-pelicula" src="<%= pelicula.imagen[1] %> " alt="">
+            <h1 class="titulo-pelicula"><%= pelicula.titulo %></h1>
+            <h2 class="director-pelicula"><%= pelicula.director %></h2>
+            <div class="lanzamiento-y-generos">
+                <span class="lanzamiento-pelicula"><%= pelicula.año_de_lanzamiento %></span>
+                <div class="generos-pelicula">
+                    <% pelicula.genero.forEach((genero,i) => { %>
+                        <span class="genero-pelicula"><%= genero %></span>
+                        <% if (i < pelicula.genero.length - 1) { %> · <% } %>
+                    <% }); %>
+                </div>
+            </div>
+            <p class="descripcion-pelicula"><%= pelicula.descripcion %></p>
+            <button id="add-film"><span class="plus-button"><i class="fa-solid fa-plus fa-sm"></i></span>Añadir a colección</button>
+        </section>
+        <section id="lista-de-copias">
+            <h1>Lista de copias</h1>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Número de copia</th>
+                    <th>Estado</th>
+                    <th>Formato</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% pelicula.copias.forEach((copia, i) => { %>
+                    <tr>
+                      <td><%= i + 1 %></td>
+                      <td><%= copia.estado %></td>
+                      <td><%= copia.formato %></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+        </section>
+    </main>
+    
+</body>
+</html>

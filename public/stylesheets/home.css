@@ -10,6 +10,7 @@ div.background-image {
     background-image: url("/images/carrousel/el-padrino.webp");
     background-size: cover;
     background-position: center;
+    transition: 0.3s;
 }
   
 div.blue-overlay {
@@ -29,21 +30,54 @@ div.slider {
     justify-content: space-between;
     align-items: center;
 
+    div#right-arrow,
+    div#left-arrow {
+        transition: all 0.3s ease;
+
+        i.icono-flecha-derecha,
+        i.icono-flecha-izquierda {
+            font-size: 2.5rem; 
+            color: #7181a3; 
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        i.icono-flecha-derecha:hover {
+            color: #a7b2c9;
+            text-shadow: 0px 0px 5px #7181a3;;
+        }
+
+        i.icono-flecha-izquierda:hover {
+            color: #a7b2c9;
+            text-shadow: 0px 0px 5px #7181a3;;
+        }
+    }
+
+    div#right-arrow:hover,
+    div#left-arrow:hover {
+        transform: scale(1.05);
+    }
+
+
+
+
     div#film-container {
 
         margin-left: -700px;
         align-items: flex-start;
-    
+
         div.film-info {
     
             margin-top: 15px;
             display: flex;
             gap: 15px;
+            
     
             span.release-year, 
             span.duration {
                 color: var(--pure-white);
                 margin: 0;
+
             }
     
             span.quality {
@@ -55,6 +89,7 @@ div.slider {
                 border-radius: 5px;
                 color: rgb(161, 161, 161);
                 font-weight: bold;
+
             }
         }
     
@@ -66,7 +101,7 @@ div.slider {
             font-size: 0.8rem;
             padding: 2px 6px 0px 6px;
             background: var(--age-limit);
-    
+
         }
     
         div.action-buttons {
@@ -89,6 +124,7 @@ div.slider {
                 padding: 10px 20px;
                 cursor: pointer;
                 margin-top: 30px;
+                transition: all 0.3s ease;
     
                 span.plus-button {
                     padding: 1px 3px;
@@ -98,10 +134,17 @@ div.slider {
     
                     i.fa-solid fa-plus fa-sm {
                             
-                        font-size: 0.2rem;
+                        font-size: 0.3rem;
                         color: var(--blue-text-on-item);
+                        
                     }
                 }
+            }
+
+            button:hover {
+                transform: scale(1.1);
+                transform: translateY(-5px);
+                box-shadow: 0px 0px 20px #7181a3;
             }
         }
     } 
@@ -111,13 +154,19 @@ div.slider {
 
 section#latest-added-films {
 
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    min-height: 90vh;
 
     h1 {
         color: var(--pure-white);
         font-size: 3rem;
         font-weight: 300;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
+        align-self: flex-start;
     }
     
     div.cards-container {
@@ -131,6 +180,7 @@ section#latest-added-films {
             height: 160px;        
             overflow: hidden;
             border-radius: 20px; 
+            transition: all 0.3s ease;
             
             img {
                 width: 100%;
@@ -138,7 +188,14 @@ section#latest-added-films {
                 object-position: center; 
             }
         }
-    }    
+
+        div.card-inner:hover {
+            transform: scale(1.1);
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 30px #7181a3;
+        }
+    }
+
 }
 
 /*CREA TU PROPIA COLECCIÓN - SECCIÓN*/
@@ -172,6 +229,13 @@ section#join-us-section {
             color: var(--blue-text-in-items);
             font-weight: 500;
             text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a#login:hover{
+            transform: scale(1.1);
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px #7181a3;
         }
     }
 }

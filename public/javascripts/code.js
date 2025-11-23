@@ -1,8 +1,8 @@
 // DIALOGO
 
-document.getElementById("iniciar-sesion-btn")?.addEventListener("click", ()=>{
+/*document.getElementById("iniciar-sesion-btn")?.addEventListener("click", ()=>{
     document.getElementById("dialog")?.showModal()
-});
+});*/
 
 document.getElementById("registrarme-btn")?.addEventListener("click", ()=>{
     document.getElementById("dialog")?.showModal()
@@ -44,11 +44,19 @@ const peliculas = [
     },
     {
       background: "/images/carrousel/una-mente-maravillosa-carrousel.webp",
-      cover: "/images/carrousel/logo-el-padrino.webp",
-      year: "2016",
-      duration: "2h 08min",
+      cover: "/images/carrousel/logo-una-mente-maravillosa.webp",
+      year: "2001",
+      duration: "2h 03min",
       age: "12+",
       quality: "HD"
+    },
+    {
+        background: "/images/carrousel/la-la-land-carrousel.webp",
+        cover: "/images/carrousel/logo-la-la-land.webp",
+        year: "2016",
+        duration: "2h 07min",
+        age: "14+",
+        quality: "HD"
     }
 ];
 
@@ -65,7 +73,7 @@ function cargarPelicula(i) {
 
 rightArrow.addEventListener("click", () => {
     index++;
-    if (index >= peliculas.length) index = 0; // vuelve al principio
+    if (index >= peliculas.length) index = 0; 
     cargarPelicula(index);
 });
 

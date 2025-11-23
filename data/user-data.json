@@ -1,0 +1,108 @@
+[
+    {
+      "username": "usuario123",
+      "password": "contraseña123",
+      "copies": [
+        {
+          "id_movie": 1,
+          "estado": "buen estado",
+          "format": "DVD"
+        },
+        {
+          "id_movie": 2,
+          "estado": "mal estado",
+          "format": "Blu-Ray"
+        },
+        {
+          "id_movie": 3,
+          "estado": "buen estado",
+          "format": "Digital"
+        }
+      ]
+    },
+    {
+      "username": "usuario456",
+      "password": "contraseña456",
+      "copies": [
+        {
+          "id_movie": 4,
+          "estado": "buen estado",
+          "format": "DVD"
+        },
+        {
+          "id_movie": 5,
+          "estado": "mal estado",
+          "format": "VHS"
+        },
+        {
+          "id_movie": 6,
+          "estado": "buen estado",
+          "format": "Blu-Ray"
+        }
+      ]
+    },
+    {
+      "username": "usuario789",
+      "password": "contraseña789",
+      "copies": [
+        {
+          "id_movie": 1,
+          "estado": "buen estado",
+          "format": "Blu-Ray"
+        },
+        {
+          "id_movie": 3,
+          "estado": "mal estado",
+          "format": "DVD"
+        },
+        {
+          "id_movie": 4,
+          "estado": "buen estado",
+          "format": "Digital"
+        }
+      ]
+    },
+    {
+      "username": "usuario101",
+      "password": "contraseña101",
+      "copies": [
+        {
+          "id_movie": 2,
+          "estado": "buen estado",
+          "format": "VHS"
+        },
+        {
+          "id_movie": 3,
+          "estado": "mal estado",
+          "format": "Blu-Ray"
+        },
+        {
+          "id_movie": 8,
+          "estado": "buen estado",
+          "format": "DVD"
+        }
+      ]
+    },
+    {
+      "username": "usuario202",
+      "password": "contraseña202",
+      "copies": [
+        {
+          "id_movie": 1,
+          "estado": "mal estado",
+          "format": "Digital"
+        },
+        {
+          "id_movie": 4,
+          "estado": "buen estado",
+          "format": "Blu-Ray"
+        },
+        {
+          "id_movie": 8,
+          "estado": "buen estado",
+          "format": "DVD"
+        }
+      ]
+    }
+  ]
+  

@@ -16,9 +16,9 @@
         <h2>Inicia sesión para poder acceder a tu colección, visualizar películas y<br> organizar todas tus copias. Si no tienes una cuenta, pulsa <a href="/register">aquí</a>.</h2>
 
         <div class="login-container">
-            <form>
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required>
+            <form method="post" action="/">
+              <label for="username">Usuario:</label>
+              <input type="text" id="username" name="username" required>
           
               <label for="password">Contraseña:</label>
               <input type="password" id="password" name="password" required>
@@ -30,7 +30,7 @@
                 <a href="#" class="forgot-password">He olvidado mi contraseña</a>
               </div>
           
-              <a href="#" id="iniciar-sesion-btn">Iniciar sesión</a>
+              <button type="submit" id="iniciar-sesion-btn">Iniciar sesión</button>
             </form>
           </div>
     </section>

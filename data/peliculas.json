@@ -1,74 +1,141 @@
 [
     {
-        "id": 1,
-        "imagen": "/images/cards/good-will-hunting.webp",
-        "titulo": "Good Will Hunting",
-        "descripcion": "Will Hunting, un joven con un talento extraordinario para las matemáticas, lucha con su pasado mientras descubre su verdadero potencial.",
-        "director": "Gus Van Sant",
-        "genero": ["Drama"],
-        "año_de_lanzamiento": 1997
+      "id": 1,
+      "imagen": [
+        "/images/cards/good-will-hunting.webp",
+        "/images/detalle/good-will-hunting.webp"
+      ],
+      "titulo": "Good Will Hunting",
+      "descripcion": "Will Hunting, un joven de Boston con un pasado difícil, trabaja como conserje en el MIT y oculta su extraordinario talento para las matemáticas y la física. Cuando resuelve un complicado problema matemático y atrae la atención de un profesor, comienza un viaje de autodescubrimiento. A través de la terapia con el psicólogo Sean Maguire, y apoyado por sus amigos y su interés amoroso Skylar, Will debe afrontar los traumas de su infancia, cuestionar su propio valor y tomar la decisión de aprovechar el potencial de su brillante mente.",
+      "director": "Gus Van Sant",
+      "genero": ["Drama"],
+      "año_de_lanzamiento": 1997,
+      "copias": [
+        {"estado": "Buen estado", "formato": "DVD"},
+        {"estado": "Mal estado", "formato": "Blu-Ray"},
+        {"estado": "Buen estado", "formato": "Digital"},
+        {"estado": "Buen estado", "formato": "VHS"}
+      ]
     },
     {
-        "id": 2,
-        "imagen": "/images/cards/rocky-iv.webp",
-        "titulo": "Rocky IV",
-        "descripcion": "Rocky Balboa se enfrenta al poderoso Ivan Drago en un combate marcado por la tensión política de la Guerra Fría.",
-        "director": "Sylvester Stallone",
-        "genero": ["Acción", "Deporte", "Drama"],
-        "año_de_lanzamiento": 1985
+      "id": 2,
+      "imagen": [
+        "/images/cards/rocky-iv.webp",
+        "/images/detalle/rocky-iv.webp"
+      ],
+      "titulo": "Rocky IV",
+      "descripcion": "En medio de la Guerra Fría, Rocky Balboa se enfrenta al boxeador soviético Ivan Drago, cuya fuerza y disciplina despiertan el temor estadounidense. Tras la muerte de su amigo Apollo Creed en el ring, Rocky decide aceptar el reto y viajar a la Unión Soviética para entrenar y disputar uno de los combates más emblemáticos del cine. La película explora temas como la rivalidad política, la amistad, el sacrificio y la reconciliación, mientras Rocky lucha no solo por el título, sino también por el honor y la memoria de Apollo.",
+      "director": "Sylvester Stallone",
+      "genero": ["Acción", "Deporte", "Drama"],
+      "año_de_lanzamiento": 1985,
+      "copias": [
+        {"estado": "Buen estado", "formato": "DVD"},
+        {"estado": "Mal estado", "formato": "VHS"},
+        {"estado": "Mal estado", "formato": "Blu-Ray"}
+      ]
     },
     {
-        "id": 3,
-        "imagen": "/images/cards/rocky-iii.webp",
-        "titulo": "Rocky III",
-        "descripcion": "Rocky debe reencontrarse a sí mismo para derrotar a Clubber Lang, un rival feroz que amenaza su reinado.",
-        "director": "Sylvester Stallone",
-        "genero": ["Acción", "Deporte", "Drama"],
-        "año_de_lanzamiento": 1982
+      "id": 3,
+      "imagen": [
+        "/images/cards/rocky-iii.webp",
+        "/images/detalle/rocky-iii.webp"
+      ],
+      "titulo": "Rocky III",
+      "descripcion": "Tras alcanzar el éxito y la fama como campeón mundial de boxeo, Rocky Balboa se enfrenta a nuevos desafíos personales y profesionales. Su aparente comodidad y el temor ante el temible aspirante Clubber Lang ponen en peligro su título y su espíritu de lucha. El apoyo de su antiguo rival Apollo Creed será clave para que Rocky recupere su motivación, entrene con nuevos métodos y encuentre dentro de sí mismo la verdadera razón por la que pelea, enfrentando sus miedos y superando sus límites.",
+      "director": "Sylvester Stallone",
+      "genero": ["Acción", "Deporte", "Drama"],
+      "año_de_lanzamiento": 1982,
+      "copias": [
+        {"estado": "Buen estado", "formato": "Digital"},
+        {"estado": "Mal estado", "formato": "DVD"}
+      ]
     },
     {
-        "id": 4,
-        "imagen": "/images/cards/diario-de-noa.webp",
-        "titulo": "El Diario de Noa",
-        "descripcion": "La apasionada historia de amor entre Allie y Noah, narrada a través de los recuerdos guardados en un diario.",
-        "director": "Nick Cassavetes",
-        "genero": ["Romance", "Drama"],
-        "año_de_lanzamiento": 2004
+      "id": 4,
+      "imagen": [
+        "/images/cards/diario-de-noa.webp",
+        "/images/detalle/diario-de-noa.webp"
+      ],
+      "titulo": "El Diario de Noa",
+      "descripcion": "En un asilo de ancianos, un hombre llamado Duke lee a una mujer la conmovedora historia de amor entre Allie Hamilton y Noah Calhoun. A través de los recuerdos escritos en un diario, conocemos el romance juvenil de la pareja en la década de los 40, enfrentando diferencias sociales, separaciones y reencuentros. La pasión, el sacrificio y la perseverancia marcan su relación a lo largo de los años. La película indaga en los temas de la memoria, la fidelidad y la importancia de las segundas oportunidades.",
+      "director": "Nick Cassavetes",
+      "genero": ["Romance", "Drama"],
+      "año_de_lanzamiento": 2004,
+      "copias": [
+        {"estado": "Buen estado", "formato": "Blu-Ray"},
+        {"estado": "Mal estado", "formato": "DVD"},
+        {"estado": "Buen estado", "formato": "Digital"},
+        {"estado": "Mal estado", "formato": "VHS"},
+        {"estado": "Buen estado", "formato": "DVD"}
+      ]
     },
     {
-        "id": 5,
-        "imagen": "/images/cards/dead-poets-society.webp",
-        "titulo": "Dead Poets Society",
-        "descripcion": "Un profesor inspira a sus alumnos a romper moldes y buscar su propia voz dentro de una academia conservadora.",
-        "director": "Peter Weir",
-        "genero": ["Drama"],
-        "año_de_lanzamiento": 1989
+      "id": 5,
+      "imagen": [
+        "/images/cards/dead-poets-society.webp",
+        "/images/detalle/dead-poets-society.webp"
+      ],
+      "titulo": "Dead Poets Society",
+      "descripcion": "En una prestigiosa academia conservadora, el carismático profesor John Keating inspira a sus alumnos para que cuestionen las reglas, abracen la creatividad y encuentren su propia voz. Por medio de la poesía y el pensamiento libre, los estudiantes desafían las expectativas familiares y el rígido sistema educativo. El impacto de Keating, la fundación de la 'Sociedad de los Poetas Muertos' y los conflictos personales llevan a momentos de triunfo y tragedia, invitando a reflexionar sobre la importancia de perseguir los propios sueños.",
+      "director": "Peter Weir",
+      "genero": ["Drama"],
+      "año_de_lanzamiento": 1989,
+      "copias": [
+        {"estado": "Buen estado", "formato": "Digital"},
+        {"estado": "Mal estado", "formato": "Blu-Ray"},
+        {"estado": "Buen estado", "formato": "DVD"}
+      ]
     },
     {
-        "id": 6,
-        "imagen": "/images/cards/el-padrino-2.webp",
-        "titulo": "El Padrino 2",
-        "descripcion": "La historia alterna entre el ascenso de Vito Corleone y el consolidado liderazgo de Michael en la familia mafiosa.",
-        "director": "Francis Ford Coppola",
-        "genero": ["Crimen", "Drama"],
-        "año_de_lanzamiento": 1974
+      "id": 6,
+      "imagen": [
+        "/images/cards/el-padrino-2.webp",
+        "/images/detalle/el-padrino-2.webp"
+      ],
+      "titulo": "El Padrino: Parte II",
+      "descripcion": "La compleja historia de la familia Corleone se cuenta en paralelo: por un lado, asistimos al ascenso de Vito Corleone desde su infancia en Sicilia, pasando por su emigración a Estados Unidos y su consolidación como líder mafioso. Por el otro, observamos cómo Michael Corleone, ya al mando, enfrenta traiciones internas, busca afianzar el poder y enfrenta dilemas éticos mientras lucha por proteger su legado familiar. La película profundiza en los lazos familiares, la ambición y la corrupción.",
+      "director": "Francis Ford Coppola",
+      "genero": ["Crimen", "Drama"],
+      "año_de_lanzamiento": 1974,
+      "copias": [
+        {"estado": "Mal estado", "formato": "VHS"},
+        {"estado": "Buen estado", "formato": "Blu-Ray"},
+        {"estado": "Buen estado", "formato": "DVD"},
+        {"estado": "Mal estado", "formato": "Digital"}
+      ]
     },
     {
-        "id": 7,
-        "imagen": "/images/cards/el-padrino-3.webp",
-        "titulo": "El Padrino 3",
-        "descripcion": "Michael Corleone intenta alejar a la familia de los negocios criminales, mientras su pasado amenaza con destruirlo todo.",
-        "director": "Francis Ford Coppola",
-        "genero": ["Crimen", "Drama"],
-        "año_de_lanzamiento": 1990
+      "id": 7,
+      "imagen": [
+        "/images/cards/el-padrino-3.webp",
+        "/images/detalle/el-padrino-3.webp"
+      ],
+      "titulo": "El Padrino: Parte III",
+      "descripcion": "Michael Corleone, envejecido y cansado, busca sacar a su familia de los negocios criminales y legitimar sus empresas. Sin embargo, viejos enemigos y oscuros secretos amenazan su propósito, mientras su sobrino Vincent Mancini emerge como nuevo protagonista de la familia. La última parte de la saga expone las consecuencias del poder, la culpa y el sacrificio, poniendo a prueba la redención y el destino de los Corleone.",
+      "director": "Francis Ford Coppola",
+      "genero": ["Crimen", "Drama"],
+      "año_de_lanzamiento": 1990,
+      "copias": [
+        {"estado": "Buen estado", "formato": "DVD"},
+        {"estado": "Mal estado", "formato": "Digital"}
+      ]
     },
     {
-        "id": 8,
-        "imagen": "/images/cards/la-la-land.webp",
-        "titulo": "La La Land",
-        "descripcion": "Una actriz y un pianista de jazz intentan cumplir sus sueños mientras viven una historia de amor marcada por decisiones difíciles.",
-        "director": "Damien Chazelle",
-        "genero": ["Musical", "Romance", "Drama"],
-        "año_de_lanzamiento": 2016
+      "id": 8,
+      "imagen": [
+        "/images/cards/la-la-land.webp",
+        "/images/detalle/la-la-land.webp"
+      ],
+      "titulo": "La La Land: La Ciudad de las Estrellas",
+      "descripcion": "Mia, una aspirante a actriz, y Sebastian, un pianista de jazz, buscan cumplir sus sueños en Los Ángeles, una ciudad llena de oportunidades y obstáculos. Sus caminos se cruzan y juntos descubren una apasionada historia de amor, enfrentando desafíos profesionales, sacrificios personales y decisiones que pondrán a prueba su relación. La película es un tributo moderno al cine musical, retrata la lucha por alcanzar las metas y cuestiona el equilibrio entre el amor y la ambición.",
+      "director": "Damien Chazelle",
+      "genero": ["Musical", "Romance", "Drama"],
+      "año_de_lanzamiento": 2016,
+      "copias": [
+        {"estado": "Buen estado", "formato": "Blu-Ray"},
+        {"estado": "Mal estado", "formato": "DVD"},
+        {"estado": "Buen estado", "formato": "Digital"}
+      ]
     }
 ]
+  

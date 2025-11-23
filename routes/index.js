@@ -6,8 +6,13 @@ const dataService = require('../data/dataService');
 /* Ruta de la Home */
 router.get('/', function(req, res, next) {
   let peliculas = dataService.getPeliculas();
-  let peliculasSlider = dataService.getPeliculasSlider();
-  res.render('index', { peliculas : peliculas, peliculasSlider : peliculasSlider });
+  res.render('index', { peliculas : peliculas });
+});
+
+/* Ruta de pelicula detalle */
+router.get("/pelicula/:pid",function(req,res,next){
+  let pelicula = (dataService.getPeliculaById( req.params.pid))
+  res.render('pelicula', { pelicula : pelicula })
 });
 
 /* Ruta del Login */

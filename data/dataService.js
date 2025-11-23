@@ -1,17 +1,27 @@
 const path = require('path');
 const fs = require('fs');
 
+
+
+const usuarios = JSON.parse(
+    fs.readFileSync(path.join(__dirname, 'user-data.json'), 'utf8')
+);
+
+function validateUser(email, password) {
+    let query = usuarios.filter((usuario => { return (usuario.username == email) }))
+
+    if (query.length>0) {
+        if (query[0].password == password) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 const peliculas = JSON.parse(
     fs.readFileSync(path.join(__dirname, 'peliculas.json'), 'utf8')
 );
-
-const peliculasSlider = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'peliculas-slider.json'), 'utf-8')
-);
-
-function getPeliculasSlider(){
-    return peliculasSlider;
-}
 
 function getPeliculas() {    
     return peliculas;
@@ -24,7 +34,7 @@ function getPeliculaById(id) {
 module.exports = {
     getPeliculas,
     getPeliculaById,
-    getPeliculasSlider
+    validateUser
 }
 
 /*

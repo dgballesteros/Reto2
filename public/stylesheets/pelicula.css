@@ -1,0 +1,141 @@
+section#detalle-hero-section {
+    margin: 80px 0px;
+    padding: 0px 50px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    "imagen titulo"
+    "imagen director"
+    "imagen lanGen"
+    "imagen descripcion"
+    "imagen boton";
+
+    color: var(--pure-white);
+
+    img.imagen-pelicula {
+        grid-area: imagen;
+        width: 280px;
+        border-radius: 20px;
+        margin-right: 50px;
+        box-shadow: 0px 0px 30px #7181a3;
+    }
+
+    h1.titulo-pelicula {
+        grid-area: titulo;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    h2.director-pelicula {
+        grid-area: director;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    div.lanzamiento-y-generos {
+        grid-area: lanGen;
+        display: flex;
+        gap: 20px;
+
+        div.generos-pelicula {
+            display: flex;
+            gap: 10px;
+
+            span.genero-pelicula {
+                text-decoration: underline;
+            }
+
+        }
+
+        
+    }
+
+    p.descripcion-pelicula {
+        grid-area: descripcion;
+    }
+
+    button#add-film {
+        grid-area: boton;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        align-self: self-start;
+        font-size: 1rem;
+        justify-self: start;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        background: var(--pure-white);
+        border: 0px;
+        border-radius: 8px;
+        color: var(--blue-text-on-item);
+        padding: 10px 20px;
+        cursor: pointer;
+
+        span.plus-button {
+            padding: 0px 2px;
+            border: 2px solid var(--blue-text-on-item);
+            border-radius: 30px;
+            font-size: 0.7rem;
+
+            i.fa-solid fa-plus fa-sm {
+                    
+                font-size: 0.3rem;
+                color: var(--blue-text-on-item);
+                
+            }
+        }
+    }
+}
+
+section#lista-de-copias {
+    padding: 0px 50px;
+    color: var(--pure-white);
+
+    table {
+        width: 90%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #182858;
+        color: #fff;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 1rem;
+        box-shadow: 0 2px 16px 0 rgba(0,0,0,0.15);
+        border-radius: 12px;
+        overflow: hidden;
+
+        th,
+        td {
+            padding: 1rem 1.5rem;
+            text-align: left;
+        }
+
+        th {
+            background: #182858;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #7181a3;
+        }
+
+        tr {
+            border-bottom: 1px solid #2e386b;
+        }
+
+        tr:last-child {
+            border-bottom: none;
+        }
+
+        td {
+            color: #ffffff;
+            font-weight: 400;
+        }
+
+        tbody tr:hover {
+            background-color: #24316b;
+            transition: background 0.2s;
+        }
+    }
+}

@@ -23,9 +23,11 @@
     <h1>Últimas películas añadidas</h1> 
     <div class="cards-container">
       <% peliculas.forEach(pelicula => { %>
-        <div class="card-inner">
-          <img src="<%= pelicula.imagen %>" alt="">
-        </div>
+        <a href="/pelicula/<%= pelicula.id %> ">
+          <div class="card-inner">
+            <img src="<%= pelicula.imagen[0] %>" alt="">
+          </div>
+        </a>
       <% }) %>
     </div>
   </section>
