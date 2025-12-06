@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
+    <title>Mi Colección - BluBox</title>
+</head>
+<body>
+    <%- include('partials/main-menu') %>
+
+    <section id="coleccion-section">
+        <h1>Mi lista de copias</h1>
+        
+        <% if (copias && copias.length > 0) { %>
+            <section id="lista-de-copias">
+                <table>
+                    <thead>
+                      <tr>
+                        <th>Número de copia</th>
+                        <th>Película</th>
+                        <th>Estado</th>
+                        <th>Formato</th>
+                        <th>Acción</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% copias.forEach((copia) => { %>
+                        <% if (copia.pelicula) { %>
+                          <tr>
+                            <td><%= copia.numeroCopia %></td>
+                            <td><%= copia.pelicula.titulo %></td>
+                            <td><%= copia.estado %></td>
+                            <td><%= copia.formato %></td>
+                            <td>
+                              <div class="action-buttons">
+                                <a href="/pelicula/<%= copia.id_movie %>" class="btn-ver-pelicula">Ver película</a>
+                                <button type="button" class="btn-eliminar-copia" onclick="confirmDelete(<%= copia.arrayIndex %>)">Eliminar</button>
+                              </div>
+                            </td>
+                          </tr>
+                        <% } %>
+                      <% }); %>
+                    </tbody>
+                  </table>
+            </section>
+        <% } else { %>
+            <p>No tienes copias en tu colección todavía.</p>
+        <% } %>
+    </section>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer') %>
+
+    <dialog id="confirm-dialog">
+      <p>¿Estás seguro de que quieres eliminar esta copia?</p>
+      <div class="dialog-buttons">
+        <form id="delete-form" method="post" action="/mi-coleccion/delete-copy" style="display: inline;">
+          <input type="hidden" name="copyIndex" id="copy-index-input">
+          <button type="submit" class="btn-confirm-delete">Eliminar</button>
+        </form>
+        <button type="button" id="cancel-delete-btn" class="btn-cancel-delete">Cancelar</button>
+      </div>
+    </dialog>
+
+    <dialog id="success-dialog">
+      <p id="success-message"></p>
+      <button id="close-dialog-btn">Aceptar</button>
+    </dialog>
+
+</body>
+<script src="/javascripts/code.js"></script>
+</html>

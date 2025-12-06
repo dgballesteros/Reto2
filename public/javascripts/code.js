@@ -4,10 +4,6 @@
     document.getElementById("dialog")?.showModal()
 });*/
 
-document.getElementById("registrarme-btn")?.addEventListener("click", ()=>{
-    document.getElementById("dialog")?.showModal()
-});
-
 document.getElementById("solicitar-ayuda-btn")?.addEventListener("click", ()=>{
     document.getElementById("dialog")?.showModal()
 });
@@ -71,17 +67,113 @@ function cargarPelicula(i) {
     qualitySpan.textContent = pelicula.quality;
   }
 
-rightArrow.addEventListener("click", () => {
-    index++;
-    if (index >= peliculas.length) index = 0; 
-    cargarPelicula(index);
-});
+if (rightArrow) {
+    rightArrow.addEventListener("click", () => {
+        index++;
+        if (index >= peliculas.length) index = 0; 
+        cargarPelicula(index);
+    });
+}
 
-leftArrow.addEventListener("click", () => {
-    index--;
-    if (index < 0) index = peliculas.length - 1; // va al final
-    cargarPelicula(index);
-});
+if (leftArrow) {
+    leftArrow.addEventListener("click", () => {
+        index--;
+        if (index < 0) index = peliculas.length - 1; // va al final
+        cargarPelicula(index);
+    });
+}
 
-cargarPelicula(index);
+if (backgroundDiv && coverImg) {
+    cargarPelicula(index);
+}
+
+// FUNCIÓN PARA AÑADIR PRIMERA COPIA (pelicula.ejs)
+function addFirstCopy() {
+    // Obtener la primera copia de la lista
+    const primeraCopia = document.querySelector('tbody tr');
+    if (primeraCopia) {
+        const form = primeraCopia.querySelector('form');
+        if (form) {
+            form.submit();
+        }
+    }
+}
+
+// FUNCIÓN PARA CONFIRMAR ELIMINACIÓN (mi-coleccion.ejs)
+let currentCopyIndex = null;
+
+function confirmDelete(copyIndex) {
+    currentCopyIndex = copyIndex;
+    const dialog = document.getElementById('confirm-dialog');
+    const input = document.getElementById('copy-index-input');
+    if (dialog && input) {
+        input.value = copyIndex;
+        dialog.showModal();
+    }
+}
+
+// MANEJO DE DIÁLOGOS DE ÉXITO Y CONFIRMACIÓN
+
+// Diálogo de éxito (index.ejs, pelicula.ejs, mi-coleccion.ejs)
+const successDialog = document.getElementById('success-dialog');
+if (successDialog) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+    
+    if (success) {
+        const message = document.getElementById('success-message');
+        if (message) {
+            if (success === 'login') {
+                message.textContent = '¡Sesión iniciada correctamente!';
+            } else if (success === 'logout') {
+                message.textContent = 'Sesión cerrada correctamente';
+            } else if (success === 'added') {
+                message.textContent = 'Película añadida correctamente a tu colección';
+            } else if (success === 'deleted') {
+                message.textContent = 'Película eliminada correctamente de tu colección';
+            }
+            
+            if (message.textContent) {
+                successDialog.showModal();
+            }
+        }
+    }
+    
+    // Cerrar diálogo al hacer clic en el botón
+    const closeBtn = document.getElementById('close-dialog-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            successDialog.close();
+            // Limpiar query parameter
+            window.history.replaceState({}, document.title, window.location.pathname);
+        });
+    }
+    
+    // Cerrar diálogo al hacer clic fuera
+    successDialog.addEventListener('click', (ev) => {
+        if (ev.target === successDialog) {
+            successDialog.close();
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    });
+}
+
+// Diálogo de confirmación (mi-coleccion.ejs)
+const confirmDialog = document.getElementById('confirm-dialog');
+if (confirmDialog) {
+    // Cerrar diálogo de confirmación
+    const cancelBtn = document.getElementById('cancel-delete-btn');
+    if (cancelBtn) {
+        cancelBtn.addEventListener('click', () => {
+            confirmDialog.close();
+        });
+    }
+    
+    // Cerrar diálogo de confirmación al hacer clic fuera
+    confirmDialog.addEventListener('click', (ev) => {
+        if (ev.target === confirmDialog) {
+            confirmDialog.close();
+        }
+    });
+}
 

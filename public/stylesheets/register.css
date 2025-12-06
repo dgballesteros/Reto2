@@ -74,7 +74,7 @@ section#register-hero-section {
 
     
 
-    a#registrarme-btn {
+    button#registrarme-btn {
         padding: 10px 20px;
         border: 0px;
         border-radius: 10px;
@@ -87,5 +87,11 @@ section#register-hero-section {
         font-family: "Poppins", sans-serif;
         align-self: flex-start;
         text-decoration: none;
+        transition: 0.3s;
+    }
+
+    button#registrarme-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0px 4px 12px rgba(113, 129, 163, 0.4);
     }
 }

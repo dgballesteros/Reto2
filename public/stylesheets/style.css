@@ -6,6 +6,7 @@
 @import "register.css";
 @import "support.css";
 @import "pelicula.css";
+@import "footer.css";
 
 body, html {
   padding: 0;
@@ -40,6 +41,82 @@ dialog#dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.616);
   backdrop-filter: blur(3px);
   
+}
+
+/* Diálogos de éxito y confirmación */
+dialog#success-dialog,
+dialog#confirm-dialog {
+  background: var(--main-blue);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  color: var(--pure-white);
+  padding: 30px 40px;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+dialog#success-dialog::backdrop,
+dialog#confirm-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+}
+
+dialog#success-dialog p,
+dialog#confirm-dialog p {
+  margin: 0 0 20px 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+dialog#success-dialog button,
+dialog#confirm-dialog button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  outline: none;
+}
+
+dialog#success-dialog #close-dialog-btn {
+  background: var(--pure-white);
+  color: var(--blue-text-on-item);
+}
+
+dialog#success-dialog #close-dialog-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(113, 129, 163, 0.4);
+}
+
+dialog#confirm-dialog .dialog-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+dialog#confirm-dialog .btn-confirm-delete {
+  background: #ff6b6b;
+  color: var(--pure-white);
+}
+
+dialog#confirm-dialog .btn-confirm-delete:hover {
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 12px rgba(255, 107, 107, 0.4);
+}
+
+dialog#confirm-dialog .btn-cancel-delete {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--pure-white);
+}
+
+dialog#confirm-dialog .btn-cancel-delete:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 

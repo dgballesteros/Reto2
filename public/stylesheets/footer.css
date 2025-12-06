@@ -1,0 +1,106 @@
+footer#footer {
+    margin-top: 80px;
+    margin-left: -15rem;
+    margin-right: -15rem;
+    padding: 60px 15rem 20px;
+    background: rgba(13, 32, 81, 0.95);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    color: var(--pure-white);
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 60px;
+        margin-bottom: 40px;
+
+        .footer-section {
+            h3.footer-logo {
+                font-size: 2rem;
+                margin-bottom: 15px;
+                color: var(--pure-white);
+                font-weight: 600;
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+                color: var(--pure-white);
+                font-weight: 500;
+            }
+
+            p {
+                line-height: 1.6;
+                opacity: 0.9;
+                font-size: 0.95rem;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    margin-bottom: 12px;
+
+                    a {
+                        color: var(--pure-white);
+                        text-decoration: none;
+                        transition: 0.3s;
+                        opacity: 0.8;
+                        font-size: 0.95rem;
+
+                        &:hover {
+                            opacity: 1;
+                            transform: translateX(5px);
+                            color: var(--pure-white);
+                        }
+                    }
+
+                    &:not(:has(a)) {
+                        opacity: 0.8;
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+
+            .social-links {
+                display: flex;
+                gap: 15px;
+                margin-top: 10px;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 50%;
+                    color: var(--pure-white);
+                    text-decoration: none;
+                    transition: 0.3s;
+                    font-size: 1.2rem;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.2);
+                        transform: translateY(-3px);
+                        box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+        p {
+            margin: 0;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+    }
+}
+

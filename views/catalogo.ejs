@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="https://kit.fontawesome.com/ef48f4e9ad.js" crossorigin="anonymous"></script>
-  <title>BluBox - Películas y entretenimiento</title>
+  <title>BluBox - Catálogo</title>
 </head>
 <body>
 
@@ -13,14 +13,10 @@
   
   <%- include('partials/main-menu') %> 
 
-  <!-- HERO SECTION -->
-
-  <%- include('partials/carrousel') %>
-
-  <!-- ULTIMAS PELICULAS AÑADIDAS -->
+  <!-- CATÁLOGO DE PELÍCULAS -->
 
   <section id="latest-added-films">
-    <h1>Últimas películas añadidas</h1> 
+    <h1>Catálogo de películas</h1> 
     <div class="cards-container">
       <% peliculas.forEach(pelicula => { %>
         <a href="/pelicula/<%= pelicula.id %> ">
@@ -32,24 +28,10 @@
     </div>
   </section>
 
-  <!-- JOIN US SECTION -->
-   
-  <section id="join-us-section">
-    <div id="join-us">
-      <h1>Crea tu propia colección</h1>
-      <h2>Gestiona tu colección, visualiza tus películas, añade nuevas copias<br> y consulta sus detalles de forma rápida y sencilla.</h2>
-      <a id="login" href="/login">Inicia sesión</a>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <%- include('partials/footer') %>
-
-  <dialog id="success-dialog">
-    <p id="success-message"></p>
-    <button id="close-dialog-btn">Aceptar</button>
-  </dialog>
 
 </body>
 <script src="/javascripts/code.js"></script>
 </html>
+

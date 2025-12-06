@@ -91,11 +91,11 @@ section#detalle-hero-section {
 }
 
 section#lista-de-copias {
-    padding: 0px 50px;
+    padding: 0px 50px 0px 0px;
     color: var(--pure-white);
 
     table {
-        width: 90%;
+        width: 100%;
         border-collapse: separate;
         border-spacing: 0;
         background: #182858;
@@ -137,5 +137,89 @@ section#lista-de-copias {
             background-color: #24316b;
             transition: background 0.2s;
         }
+
+        a.btn-ver-pelicula {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--pure-white);
+            color: var(--blue-text-on-item);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        a.btn-ver-pelicula:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(113, 129, 163, 0.4);
+            background: #f0f0f0;
+        }
+
+        button.btn-añadir-copia,
+        a.btn-añadir-copia {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--pure-white);
+            color: var(--blue-text-on-item);
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+        }
+
+        button.btn-añadir-copia:hover,
+        a.btn-añadir-copia:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(113, 129, 163, 0.4);
+            background: #f0f0f0;
+        }
+
+        div.action-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        button.btn-eliminar-copia {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #ff6b6b;
+            color: var(--pure-white);
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-family: "Poppins", sans-serif;
+        }
+
+        button.btn-eliminar-copia:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 12px rgba(255, 107, 107, 0.4);
+            background: #ff5252;
+        }
+    }
+}
+
+section#coleccion-section {
+    padding: 80px 50px;
+    color: var(--pure-white);
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        opacity: 0.9;
     }
 }

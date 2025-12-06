@@ -1,0 +1,50 @@
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3 class="footer-logo">BluBox</h3>
+            <p>Tu plataforma para gestionar y disfrutar<br> de tu colección de películas favoritas.</p>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Enlaces rápidos</h4>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/catalogo">Catálogo</a></li>
+                <li><a href="/support">Soporte</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Mi cuenta</h4>
+            <ul>
+                <% if (isLogged && username) { %>
+                    <li><a href="/mi-coleccion">Mi colección</a></li>
+                    <li><a href="/logout">Cerrar sesión</a></li>
+                <% } else { %>
+                    <li><a href="/login">Iniciar sesión</a></li>
+                    <li><a href="/register">Registrarse</a></li>
+                <% } %>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <ul>
+                <li>Email: info@blubox.com</li>
+                <li>Teléfono: +34 900 123 456</li>
+                <li>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2025 BluBox. Todos los derechos reservados.</p>
+    </div>
+</footer>
+

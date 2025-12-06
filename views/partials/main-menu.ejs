@@ -1,14 +1,25 @@
 <header id="header">
-    <a href="/" style="text-decoration: none;">
-      <h1 class="logo">BluBox</h1>
-    </a>  
-    <nav id="menu-nav">
-      <a href="/" class="link-nav">Inicio</a>
-      <a href="#" class="link-nav">Mi colección</a>
-      <a href="#" class="link-nav">Catálogo</a>
-      <a href="/support" class="link-nav">Soporte</a>
-    </nav>
+  <a href="/" style="text-decoration: none;">
+    <h1 class="logo">BluBox</h1>
+  </a>  
+  <nav id="menu-nav">
+    <a href="/" class="link-nav">Inicio</a>
+    <a href="/mi-coleccion" class="link-nav">Mi colección</a>
+    <a href="/catalogo" class="link-nav">Catálogo</a>
+    <a href="/support" class="link-nav">Soporte</a>
+  </nav>
+  <div class="user-actions">
     <a href="/login" class="login-link">
       <i class="fa-regular fa-user"></i>
+      <% if (isLogged && username) { %>
+        <span class="username-text"><%= username %></span>
+      <% } %>
     </a>
-  </header>
+    <% if (isLogged && username) { %>
+      <a href="/logout" class="logout-link">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span class="logout-text">Cerrar sesión</span>
+      </a>
+    <% } %>
+  </div>
+</header>

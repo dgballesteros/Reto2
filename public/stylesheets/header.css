@@ -26,30 +26,94 @@ header#header {
         }
     }
 
+    /* CONTENEDOR DE ACCIONES DE USUARIO */
+    
+    div.user-actions {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
     /* ICONO DE INICIO DE SESIÓN */
 
     a.login-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         padding: 10px 9px;
         background: var(--pure-white);
         border-radius: 30px;
         transition: 0.3s;
+        text-decoration: none;
 
         i.fa-regular,
         i.fa-user {
             transition: 0.3s;
             font-size: 1.5rem;
             color: var(--blue-text-on-item);
+            flex-shrink: 0;
+        }
+
+        span.username-text {
+            color: var(--blue-text-on-item);
+            font-size: 1rem;
+            font-weight: 500;
+            white-space: nowrap;
+            margin-right: 4px;
+        }
+
+        /* Cuando hay texto, ajustar el padding horizontal */
+        &:has(span.username-text) {
+            padding: 10px 16px;
         }
     }
 
     a.login-link:hover {
-
-        transform: scale(1.1);
         transform: translateY(-2px);
         box-shadow: 0px 0px 20px #7181a3;
 
         i.fa-regular,
         i.fa-user {
+            transform: scale(1.1);
+        }
+    }
+
+    /* BOTÓN DE CERRAR SESIÓN */
+
+    a.logout-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid var(--pure-white);
+        border-radius: 30px;
+        transition: 0.3s;
+        text-decoration: none;
+
+        i.fa-solid,
+        i.fa-right-from-bracket {
+            transition: 0.3s;
+            font-size: 1.2rem;
+            color: var(--pure-white);
+            flex-shrink: 0;
+        }
+
+        span.logout-text {
+            color: var(--pure-white);
+            font-size: 1rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+    }
+
+    a.logout-link:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+
+        i.fa-solid,
+        i.fa-right-from-bracket {
             transform: scale(1.1);
         }
     }

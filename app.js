@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -19,8 +20,33 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(session({
+  name: 'sesionId', // nombre de la cookie
+  secret: 'clavedesessionmuycomplejaparaencriptarlacookie',
+  resave: false, // no reescribe si no hay cambios
+  saveUninitialized: false, // no guarda sesiones vacías
+  cookie: {
+    httpOnly: true,
+    secure: false, // true si usas HTTPS
+    maxAge: 1000 * 60 * 60 * 24 // 1 día (milisegundos * segundos * minutos * horas)
+  }
+}));
+
+// Middleware para pasar variables de sesión a todas las vistas
+
+app.use(function(req, res, next) {
+  res.locals.isLogged = req.session.isLogged || false;
+  res.locals.username = req.session.username || null;
+  next();
+});
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+/*app.use('/login', usersRouter);
+app.use('/register', usersRouter);*/
+
+// usersRouter solo para el POST de login
+app.use('/login', usersRouter); // Mantiene el POST de login
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
