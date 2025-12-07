@@ -31,20 +31,20 @@ let index = 0;
 
 const peliculas = [
     {
-      background: "/images/carrousel/el-padrino-carrousel.webp",
-      cover: "/images/carrousel/logo-el-padrino.webp",
-      year: "1972",
-      duration: "2h 56min",
-      age: "16+",
-      quality: "HD"
+        background: "/images/carrousel/el-padrino-carrousel.webp",
+        cover: "/images/carrousel/logo-el-padrino.webp",
+        year: "1972",
+        duration: "2h 56min",
+        age: "16+",
+        quality: "HD"
     },
     {
-      background: "/images/carrousel/una-mente-maravillosa-carrousel.webp",
-      cover: "/images/carrousel/logo-una-mente-maravillosa.webp",
-      year: "2001",
-      duration: "2h 03min",
-      age: "12+",
-      quality: "HD"
+        background: "/images/carrousel/una-mente-maravillosa-carrousel.webp",
+        cover: "/images/carrousel/logo-una-mente-maravillosa.webp",
+        year: "2001",
+        duration: "2h 03min",
+        age: "12+",
+        quality: "HD"
     },
     {
         background: "/images/carrousel/la-la-land-carrousel.webp",
@@ -65,7 +65,7 @@ function cargarPelicula(i) {
     durationSpan.textContent = pelicula.duration;
     ageSpan.textContent = pelicula.age;
     qualitySpan.textContent = pelicula.quality;
-  }
+}
 
 if (rightArrow) {
     rightArrow.addEventListener("click", () => {
@@ -126,11 +126,11 @@ if (successDialog) {
             if (success === 'login') {
                 message.textContent = '¡Sesión iniciada correctamente!';
             } else if (success === 'logout') {
-                message.textContent = 'Sesión cerrada correctamente';
+                message.textContent = '¡Sesión cerrada correctamente!';
             } else if (success === 'added') {
-                message.textContent = 'Película añadida correctamente a tu colección';
+                message.textContent = '¡Película añadida correctamente a tu colección!';
             } else if (success === 'deleted') {
-                message.textContent = 'Película eliminada correctamente de tu colección';
+                message.textContent = '¡Película eliminada correctamente de tu colección!';
             }
             
             if (message.textContent) {

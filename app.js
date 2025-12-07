@@ -41,11 +41,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', indexRouter);
-/*app.use('/login', usersRouter);
-app.use('/register', usersRouter);*/
-
-// usersRouter solo para el POST de login
-app.use('/login', usersRouter); // Mantiene el POST de login
+app.use('/', usersRouter); // Rutas de usuarios: /login, /register, /logout, /mi-coleccion
 
 
 // catch 404 and forward to error handler
